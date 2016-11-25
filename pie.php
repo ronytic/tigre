@@ -1,7 +1,7 @@
    </div>
 </div>
 
-    <!-- Right sidebar -->
+    <!--<!-- Right sidebar -->
     <div id="right-sidebar" class="animated fadeInRight">
 
         <div class="p-m">
@@ -113,7 +113,7 @@
             </small>
         </div>
 
-    </div>
+    </div>-->
 
     <!-- Footer-->
     <footer class="footer">
@@ -126,23 +126,18 @@
 </div>
 
 <!-- Vendor scripts -->
-<script src="js/core/jquery.min.js"></script>
-<script src="js/core/jquery-ui.min.js"></script>
-<script src="js/core/slimScroll/jquery.slimscroll.min.js"></script>
-<script src="js/core/bootstrap.min.js"></script>
-<!--<script src="vendor/jquery-flot/jquery.flot.js"></script>
-<script src="vendor/jquery-flot/jquery.flot.resize.js"></script>
-<script src="vendor/jquery-flot/jquery.flot.pie.js"></script>
-<script src="vendor/flot.curvedlines/curvedLines.js"></script>
-<script src="vendor/jquery.flot.spline/index.js"></script>-->
-<script src="js/core/metismenu/metisMenu.min.js"></script>
-<script src="js/core/icheck.min.js"></script>
-<script src="js/core/peity/jquery.peity.min.js"></script>
-<script src="js/core/sparkline/index.js"></script>
+<script src="<?php echo $folder?>js/core/jquery.min.js"></script>
+<script src="<?php echo $folder?>js/core/jquery-ui.min.js"></script>
+<script src="<?php echo $folder?>js/core/slimScroll/jquery.slimscroll.min.js"></script>
+<script src="<?php echo $folder?>js/core/bootstrap.min.js"></script>
+<script src="<?php echo $folder?>js/core/metismenu/metisMenu.min.js"></script>
+<script src="<?php echo $folder?>js/core/icheck.min.js"></script>
+<script src="<?php echo $folder?>js/core/peity/jquery.peity.min.js"></script>
+<script src="<?php echo $folder?>js/core/sparkline/index.js"></script>
 
 <!-- App scripts -->
-<script src="js/core/homer.js"></script>
-<script src="js/core/charts.js"></script>
+<script src="<?php echo $folder?>js/core/homer.js"></script>
+<script src="<?php echo $folder?>js/core/charts.js"></script>
 
 
     <script>

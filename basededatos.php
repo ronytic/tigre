@@ -2,7 +2,7 @@
 $host="localhost";
 $user="root";
 $pass="";
-$database="opticacosmos";
+$database="tigre";
 
 /*$user="redcampu_csb";
 $pass="83034888";

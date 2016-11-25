@@ -1,4 +1,6 @@
 <?php
+include_once("login/check.php");
+$folder="";
 
 ?>
 <?php include_once("cabecerahtml.php");?>

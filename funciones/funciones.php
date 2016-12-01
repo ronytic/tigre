@@ -133,7 +133,7 @@ function campoM($texto,$nombre,$tipo="text",$valores="",$orientacion=0,$clase=""
 function listadotabla($titulo,$datos,$enlaces=0,$ver="",$modifica="",$elimina="",$botones="",$adicional="",$target="_self"){
 	global $folder,$idioma;
 	if(count($datos)==0){
-		echo $idioma['NoSePudoEncontrar'];
+		echo "No se pudo encontrar los datos requeridos";
 		return false;
 	}
 	?>
@@ -159,7 +159,7 @@ function listadotabla($titulo,$datos,$enlaces=0,$ver="",$modifica="",$elimina=""
     $id=array_shift($d);
 	?>
 	<tr class="contenido <?php echo $d['EstiloFila']?>">
-		<td class="der"><?php if($id!=""){echo $i;}?></td>
+		<td class="text-right"><?php if($id!=""){echo $i;}?></td>
 		<?php foreach($titulo as $k=>$v){
 			?>
 			<td colspan="<?php echo (is_array($d[$k])?$d[$k]['colspan']:'');?>" rowspan="<?php echo (is_array($d[$k])?$d[$k]['rowspan']:'');?>" class="<?php echo ($d[$k]['class']);?>" ><?php archivo(is_array($d[$k])?$d[$k]['Valor']:$d[$k]);?></td>
@@ -181,15 +181,15 @@ function listadotabla($titulo,$datos,$enlaces=0,$ver="",$modifica="",$elimina=""
 			}
 			if(!empty($modifica)){
 			?>
-				<a href="<?php echo $modifica;?>?Cod=<?php echo $id;?>" class="btn btn-xs btn-info modificar" title="<?php echo $idioma['Modificar']?>">
-                	<i class="icon-edit"></i>
+				<a href="<?php echo $modifica;?>?Cod=<?php echo $id;?>" class="btn btn-xs btn-info modificar" title="Modificar">
+                	<i class="fa fa-edit"></i>
                 </a>
 			<?php
 			}
 			if(!empty($elimina)){
 			?>
-				<a href="<?php echo $elimina;?>?Cod=<?php echo $id;?>" class="btn btn-xs btn-danger eliminar" title="<?php echo $idioma['Eliminar']?>">
-                	<i class="icon-trash"></i>
+				<a href="<?php echo $elimina;?>?Cod=<?php echo $id;?>" class="btn btn-xs btn-danger eliminar" title="Eliminar">
+                	<i class="fa fa-trash"></i>
                 </a>
 			<?php
 			}

@@ -1,7 +1,7 @@
 <?php
 include_once("../../login/check.php");
 $folder="../../";
-$titulo="Listado de Categorias";
+$titulo="Listado de Subcategorias";
 include_once("../../class/categoria.php");
 $categoria=new categoria;
 $cat=todoLista($categoria->mostrarTodoRegistro("",1,"nombre"),"codcategoria","nombre");

@@ -19,7 +19,7 @@
 </div>
 
 <!-- Vendor scripts -->
-<script src="<?php echo $folder?>js/core/jquery.min.js"></script>
+
 <script src="<?php echo $folder?>js/core/jquery-ui.min.js"></script>
 <script src="<?php echo $folder?>js/core/slimScroll/jquery.slimscroll.min.js"></script>
 <script src="<?php echo $folder?>js/core/bootstrap.min.js"></script>

@@ -49,3 +49,4 @@ $submenu=new submenu;
     <link rel="stylesheet" href="<?php echo $folder?>css/core/pe-icon-7-stroke.css" />
     <link rel="stylesheet" href="<?php echo $folder?>css/core/helper.css" />
     <link rel="stylesheet" href="<?php echo $folder?>css/core/style.css">
+    <script src="<?php echo $folder?>js/core/jquery.min.js"></script>

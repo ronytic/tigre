@@ -11,7 +11,7 @@ $valores=array("nombre"=>"'$nombre'",
                 "descripcion"=>"'$descripcion'",
                 "imagen"=>"'$imagen'"
             );
-//$categoria->insertarRegistro($valores);
+$categoria->insertarRegistro($valores);
 //print_r($valores);
 $titulo="Mensaje de Confirmación";
 $folder="../../";

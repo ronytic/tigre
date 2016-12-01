@@ -3,20 +3,10 @@ include_once("login/check.php");
 $folder="";
 $titulo="Página de Inicio";
 $subtitulo="";
+$titulo2="Página de Inicio";
 ?>
 <?php include_once("cabecerahtml.php");?>
 <?php include_once("cabecera.php");?>
-<div class="col-lg-12">
-    <div class="hpanel">
-        <div class="panel-heading">
-            <div class="panel-tools">
-                <a class="showhide"><i class="fa fa-chevron-up"></i></a>
-                <!--<a class="closebox"><i class="fa fa-times"></i></a>-->
-            </div>
-            Página de Inicio
-        </div>
-        <div class="panel-body">
-            <div class="row">
                 <div class="col-lg-10 col-lg-offset-1">
                 
                     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
@@ -84,10 +74,6 @@ $subtitulo="";
         </span>
             
         </div>
-    </div>
-</div>
-</div>
 
-</div>
         
 <?php include_once("pie.php");?>

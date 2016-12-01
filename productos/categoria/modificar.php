@@ -25,7 +25,7 @@ include_once("../../cabecerahtml.php");
         <tr>
             <td class="text-right">Imágen de la Categoria</td>
             <td><input name="imagen" class="form-control" type="file" accept="image/*">
-                <?php if($cat['descripcion']!=""){
+                <?php if($cat['imagen']!=""){
                 ?>
                 <img src="../../imagenes/categoria/<?php echo $cat['imagen']?>" class="img-thumbnail" width="300">
                 <?php }?>

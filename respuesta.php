@@ -3,11 +3,14 @@ include_once("cabecerahtml.php");
 ?>
 <?php include_once("cabecera.php");?>
 <div class="col-lg-12">
+    <div class=" alert alert-success">
     <ul>
     <?php foreach($mensajes as $m){?>
         <li><?php echo $m;?></li>
     <?php }?>
     </ul>
+    </div>
+    <br>
     <?php if($nuevo==1){?>
     <a href="index.php" class="btn btn-info">Nuevo Registro</a>
     <?php }?>

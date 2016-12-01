@@ -1,3 +1,8 @@
+               </div>
+            </div>
+        </div>
+    </div>    
+   <!----------------->
    </div>
 </div>
 
@@ -26,7 +31,8 @@
 <!-- App scripts -->
 <script src="<?php echo $folder?>js/core/homer.js"></script>
 <script src="<?php echo $folder?>js/core/charts.js"></script>
-
+<script src="<?php echo $folder?>js/core/jquery.form.js"></script>
+<script src="<?php echo $folder?>js/core/cargadortotal.js"></script>
 
     <script>
     </script>

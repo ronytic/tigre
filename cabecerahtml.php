@@ -1,7 +1,22 @@
 <?php
 $Nivel=$_SESSION['Nivel'];
+$CodUsuarioLog=$_SESSION['CodUsuarioLog'];
+include_once("class/usuario.php");
 include_once("class/config.php");
 $config=new config;
+$usuario2=new usuario;
+$us2=$usuario2->mostrarDatos($CodUsuarioLog);
+$us2=array_shift($us2);
+$NombreUsuario=$us2['Nombres'];
+$PaternoUsuario=$us2['Paterno'];
+$MaternoUsuario=$us2['Materno'];
+switch($Nivel){
+    case 1:{$NivelUsuario="Administrador";}break;   
+    case 2:{$NivelUsuario="Gerente";}break;   
+    case 3:{$NivelUsuario="Administrador";}break;   
+    case 4:{$NivelUsuario="Secretaria";}break;      
+    case 4:{$NivelUsuario="Vendedor";}break;    
+}
 
 $Titulo=$config->mostrarConfig("Titulo",1);
 $Lema=$config->mostrarConfig("Lema",1);

@@ -39,9 +39,9 @@ function inicio(){
 		var direccion=$(this).attr("href");
 		e.preventDefault();
 		e.stopPropagation();
-		if(confirm(DeseaEliminarRegistro)){
+		if(confirm("¿Esta seguro que desea Eliminar este Registro?")){
 			$.post(direccion,function(){
-				$("form.formulario").submit();	
+				$("form.formulariobusqueda").submit();	
 			});
 		}
 		return false;
@@ -62,10 +62,10 @@ function inicio(){
 	
 	//Al INICIO
 	$("textarea[required],input[required][type=text],input[required][type=number],select[required],input[required][type=date],input[required][type=time]").not('.norequerido').after('<i class="ace-icon red icon-warning-sign" title="Obligatorio"></i>');
-    $("input").click(function(){
+    /*$("input").click(function(){
         
         $(this).select();
-    });
+    });*/
 	//$("select").not(".noselect").attr("data-placeholder","Seleccione...").chosen({keyboard:true,width: "100%",no_results_text: "Datos No encontrados"});
 	//$("table").stickyTableHeaders();
 	//$("table.inicio").stickyTableHeaders('destroy');
@@ -251,6 +251,7 @@ function sacarIniciales(texto){
 jQuery.fn.reset = function () {
   $(this).each (function() { this.reset(); });
 }
+/*
 function enter2tab(e) {
      
    if (e.keyCode == 13) {
@@ -265,4 +266,4 @@ function enter2tab(e) {
            return false;
        }
    }
-}
+}*/

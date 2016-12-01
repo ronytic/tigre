@@ -1,5 +1,5 @@
 </head>
-<body class="fixed-navbar fixed-sidebar">
+<body class="fixed-navbar fixed-sidebar fixed-footer">
 
 <!-- Simple splash screen-->
 <div class="splash"> <div class="color-line"></div><div class="splash-title"><h1>Homer - Responsive Admin Theme</h1><p>Special Admin Theme for small and medium webapp with very clean and aesthetic style and feel. </p><div class="spinner"> <div class="rect1"></div> <div class="rect2"></div> <div class="rect3"></div> <div class="rect4"></div> <div class="rect5"></div> </div> </div> </div>
@@ -21,9 +21,9 @@
         <div class="small-logo">
             <span class="text-primary"><small><?php echo $Titulo;?></small></span>
         </div>
-        <form role="search" class="navbar-form-custom" method="post" action="#">
+        <form role="search" class="navbar-form-custom" method="post" action="">
             <div class="form-group">
-                <input type="text" placeholder="Search something special" class="form-control" name="search">
+                <input type="text" placeholder="" class="form-control" name="search">
             </div>
         </form>
         <div class="mobile-menu">
@@ -175,13 +175,21 @@
     <div id="navigation">
         <div class="profile-picture">
             <a href="index-2.html">
-                <img src="imagenes/usuario/profile.jpg" class="img-circle m-b" alt="logo">
+                <img src="<?php echo $folder?>imagenes/logo/logo.jpg" class="img-thumbnail  m-b" alt="logo">
             </a>
 
             <div class="stats-label text-color">
-                <span class="font-extra-bold font-uppercase">Robert Razer</span>
+                <div>
+                    
+                    <small class="text-muted"><?php echo $Lema;?></small>
+                </div>
+                <span class="font-extra-bold font-uppercase"><?php echo $NombreUsuario;?> <?php echo $PaternoUsuario;?> <?php echo $MaternoUsuario;?> </span>
+                <div>
+                    
+                    <small class="text-muted"><?php echo $NivelUsuario;?></small>
+                </div>
 
-                <div class="dropdown">
+                <!--<div class="dropdown">
                     <a class="dropdown-toggle" href="#" data-toggle="dropdown">
                         <small class="text-muted">Founder of App <b class="caret"></b></small>
                     </a>
@@ -190,18 +198,19 @@
                         <li><a href="profile.html">Profile</a></li>
                         <li><a href="analytics.html">Analytics</a></li>
                         <li class="divider"></li>
-                        <li><a href="login.html">Logout</a></li>
+                        <li><a href="login/jk">Logout</a></li>
                     </ul>
-                </div>
+                </div>-->
 
 
-                <div id="sparkline1" class="small-chart m-t-sm"></div>
-                <div>
+                <!--<div id="sparkline1" class="small-chart m-t-sm">s</div>-->
+                <!--<div>
                     <h4 class="font-extra-bold m-b-xs">
                         $260 104,200
                     </h4>
                     <small class="text-muted">Your income from the last year in sales product X.</small>
-                </div>
+                </div>-->
+                
             </div>
         </div>
 
@@ -234,13 +243,24 @@
         <div class="row">
             <div class="col-lg-12 text-center m-t-md">
                 <h2>
-                    Welcome to Homer Theme
+                    <?php echo $titulo;?>
                 </h2>
 
                 <p>
-                    Special <strong>Admin Theme</strong> for small, medium and large webapp with very clean and
-                    aesthetic style and feel.
+                    <?php echo $subtitulo;?>
                 </p>
             </div>
         </div>
         <div class="row">
+        <!------------>
+        <div class="col-lg-12">
+            <div class="hpanel">
+                <div class="panel-heading">
+                    <div class="panel-tools">
+                        <a class="showhide"><i class="fa fa-chevron-up"></i></a>
+                        <!--<a class="closebox"><i class="fa fa-times"></i></a>-->
+                    </div>
+                    <?php echo $titulo2?>
+                </div>
+                <div class="panel-body">
+                    <div class="row">

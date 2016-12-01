@@ -48,7 +48,7 @@
         </div>
         <div class="navbar-right">
             <ul class="nav navbar-nav no-borders">
-                <!--<li class="dropdown">
+                <?php /*<li class="dropdown">
                     <a class="dropdown-toggle" href="#" data-toggle="dropdown">
                         <i class="pe-7s-speaker"></i>
                     </a>
@@ -159,7 +159,7 @@
                     <a href="#" id="sidebar" class="right-sidebar-toggle">
                         <i class="pe-7s-upload pe-7s-news-paper"></i>
                     </a>
-                </li>-->
+                </li>-->*/?>
                 <li class="dropdown">
                     <a href="<?php echo $folder?>login/logout.php" title="Salir del Sistema">
                         <i class="pe-7s-upload pe-rotate-90"></i>

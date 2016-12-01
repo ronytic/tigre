@@ -267,7 +267,7 @@ class bd{
 		return $this->updateRow($values,$Where);	
 	}
 	function eliminarRegistro($Where){
-		return $this->updateRow(array("Activo"=>"0"),$Where);	
+		return $this->updateRow(array("activo"=>"0"),$Where);	
 	}
 }
 

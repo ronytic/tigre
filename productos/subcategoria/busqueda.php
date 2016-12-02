@@ -6,7 +6,7 @@ include_once("../../class/subcategoria.php");
 $subcategoria=new subcategoria;
 include_once("../../class/categoria.php");
 $categoria=new categoria;
-$subcat=$subcategoria->mostrarTodoRegistro("codcategoria LIKE '$codcategoria' and nombre LIKE '$nombre%' and descripcion LIKE '$descripcion%'");
+$subcat=$subcategoria->mostrarTodoRegistro("codcategoria LIKE '$codcategoria' and nombre LIKE '$nombre%' and descripcion LIKE '$descripcion%'",1,"nombre");
 $i=0;
 foreach($subcat as $sc){$i++;
     $c=$categoria->mostrarRegistro($sc['codcategoria']);

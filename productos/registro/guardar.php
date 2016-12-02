@@ -11,6 +11,7 @@ $producto=new producto;
 $valores=array( "codcategoria"=>"'$codcategoria'",
                 "codsubcategoria"=>"'$codsubcategoria'",
                 "dimension"=>"'$dimension'",
+                "codigo"=>"'$codigo'",
                 "embalajeprincipal"=>"'$embalajeprincipal'",
                 "embalajesecundario"=>"'$embalajesecundario'",
                 "unidad"=>"'$unidad'",
@@ -19,7 +20,7 @@ $valores=array( "codcategoria"=>"'$codcategoria'",
                 "preciosf"=>"'$preciosf'",
                 "especial"=>"'$especial'",
             );
-//$producto->insertarRegistro($valores);
+$producto->insertarRegistro($valores);
 //print_r($valores);
 $titulo="Mensaje de Confirmación";
 $folder="../../";

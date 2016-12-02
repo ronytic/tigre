@@ -28,7 +28,7 @@ function buscar(e){
     <form action="guardar.php" method="post" enctype="multipart/form-data">
     <table class="table table-bordered table-hover">
         <tr>
-            <td class="text-right">Categoria</td>
+            <td class="text-right col-lg-6">Categoria</td>
             <td><?php campo("codcategoria","select",$cat,"form-control",1)?></td>
         </tr>
         <tr>
@@ -37,11 +37,15 @@ function buscar(e){
         </tr>
         <tr>
             <td class="text-right">Dimensión</td>
-            <td><input type="text" name="dimension" class="form-control" autofocus></td>
+            <td><input type="text" name="dimension" class="form-control" autofocus required></td>
+        </tr>
+        <tr>
+            <td class="text-right">Código</td>
+            <td><input type="text" name="codigo" class="form-control"  value="" ></td>
         </tr>
         <tr>
             <td class="text-right">Embalaje Principal</td>
-            <td><input type="text" name="embalajeprincipal" class="form-control" ></td>
+            <td><input type="text" name="embalajeprincipal" class="form-control" required></td>
         </tr>
         <tr>
             <td class="text-right">Embalaje Secundario</td>
@@ -49,19 +53,19 @@ function buscar(e){
         </tr>
         <tr>
             <td class="text-right">Unidad</td>
-            <td><input type="text" name="unidad" class="form-control" ></td>
+            <td><input type="text" name="unidad" class="form-control" required></td>
         </tr>
         <tr class="danger">
             <td class="text-right">Precio Unitario</td>
-            <td><input type="number" name="preciounitario" class="form-control text-right" value="" min="0" step="1" placeholder="0"></td>
+            <td><input type="number" name="preciounitario" class="form-control text-right" value="" min="0" step="0.01" placeholder="0" required></td>
         </tr>
         <tr class="danger">
             <td class="text-right">Precio Con/Factura</td>
-            <td><input type="number" name="preciocf" class="form-control text-right" value="" min="0" step="1" placeholder="0"></td>
+            <td><input type="number" name="preciocf" class="form-control text-right" value="" min="0" step="0.01" placeholder="0" required></td>
         </tr>
         <tr class="danger">
             <td class="text-right">Precio Sin/Factura</td>
-            <td><input type="number" name="preciosf" class="form-control text-right" value="" min="0" step="1" placeholder="0"></td>
+            <td><input type="number" name="preciosf" class="form-control text-right" value="" min="0" step="0.01" placeholder="0" required></td>
         </tr>
         <tr>
             <td class="text-right">Especial</td>

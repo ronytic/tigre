@@ -51,11 +51,15 @@ function buscar(e){
         </tr>
         <tr>
             <td class="text-right">Dimensión</td>
-            <td><input type="text" name="dimension" class="form-control" autofocus value="<?php echo $pro['dimension']?>"></td>
+            <td><input type="text" name="dimension" class="form-control" autofocus value="<?php echo $pro['dimension']?>" required></td>
+        </tr>
+        <tr>
+            <td class="text-right">Código</td>
+            <td><input type="text" name="codigo" class="form-control"  value="<?php echo $pro['codigo']?>" ></td>
         </tr>
         <tr>
             <td class="text-right">Embalaje Principal</td>
-            <td><input type="text" name="embalajeprincipal" class="form-control" value="<?php echo $pro['embalajeprincipal']?>"></td>
+            <td><input type="text" name="embalajeprincipal" class="form-control" value="<?php echo $pro['embalajeprincipal']?>" required></td>
         </tr>
         <tr>
             <td class="text-right">Embalaje Secundario</td>
@@ -63,19 +67,19 @@ function buscar(e){
         </tr>
         <tr>
             <td class="text-right">Unidad</td>
-            <td><input type="text" name="unidad" class="form-control" value="<?php echo $pro['unidad']?>"></td>
+            <td><input type="text" name="unidad" class="form-control" value="<?php echo $pro['unidad']?>" required></td>
         </tr>
         <tr class="danger">
             <td class="text-right">Precio Unitario</td>
-            <td><input type="number" name="preciounitario" class="form-control text-right" value="<?php echo $pro['preciounitario']?>" min="0" step="1" placeholder="0"></td>
+            <td><input type="number" name="preciounitario" class="form-control text-right" value="<?php echo $pro['preciounitario']?>" min="0" step="0.01" placeholder="0" required></td>
         </tr>
         <tr class="danger">
             <td class="text-right">Precio Con/Factura</td>
-            <td><input type="number" name="preciocf" class="form-control text-right" value="<?php echo $pro['preciocf']?>" min="0" step="1" placeholder="0"></td>
+            <td><input type="number" name="preciocf" class="form-control text-right" value="<?php echo $pro['preciocf']?>" min="0" step="0.01" placeholder="0" required></td>
         </tr>
         <tr class="danger">
             <td class="text-right">Precio Sin/Factura</td>
-            <td><input type="number" name="preciosf" class="form-control text-right" value="<?php echo $pro['preciosf']?>" min="0" step="1" placeholder="0"></td>
+            <td><input type="number" name="preciosf" class="form-control text-right" value="<?php echo $pro['preciosf']?>" min="0" step="0.01" placeholder="0" required></td>
         </tr>
         <tr>
             <td class="text-right">Especial</td>

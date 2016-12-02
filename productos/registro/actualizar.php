@@ -7,6 +7,7 @@ $producto=new producto;
 $valores=array( "codcategoria"=>"'$codcategoria'",
                 "codsubcategoria"=>"'$codsubcategoria'",
                 "dimension"=>"'$dimension'",
+                "codigo"=>"'$codigo'",
                 "embalajeprincipal"=>"'$embalajeprincipal'",
                 "embalajesecundario"=>"'$embalajesecundario'",
                 "unidad"=>"'$unidad'",

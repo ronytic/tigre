@@ -10,7 +10,7 @@ $categoria=new categoria;
 include_once("../../class/producto.php");
 $producto=new producto;
 
-$pro=$producto->mostrarTodoRegistro("codcategoria LIKE '$codcategoria' and codsubcategoria LIKE '$codsubcategoria' and dimension LIKE '$dimension%' and embalajeprincipal LIKE '$embalajeprincipal%' and embalajesecundario LIKE '$embalajesecundario%' and unidad LIKE '$unidad%'",1,"dimension,unidad,embalajeprincipal");
+$pro=$producto->mostrarTodoRegistro("codcategoria LIKE '$codcategoria' and codsubcategoria LIKE '$codsubcategoria' and dimension LIKE '$dimension%' and embalajeprincipal LIKE '$embalajeprincipal%' and embalajesecundario LIKE '$embalajesecundario%' and unidad LIKE '$unidad%'",1,"dimension,unidad,embalajeprincipal,codcategoria,codsubcategoria");
 $i=0;
 foreach($pro as $p){$i++;
     $c=$categoria->mostrarRegistro($p['codcategoria']);

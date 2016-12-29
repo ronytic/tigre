@@ -49,7 +49,7 @@ foreach($inv as $in){$i++;
                 </a>';}
 }
 ?><div class="alert alert-danger">Por seguridad, Solo se puede eliminar cuando la cantidad recargada es igual al Stock.</div>
-<strong>Fecha de Recarga:</strong> <?php echo fecha2Str($fecharecarga)?>
+<strong>Fecha de Recarga:</strong> <?php echo ($fecharecarga)=="%"?"Todas":fecha2Str($fecharecarga);?>
 <?php
 listadotabla(array("codsucursal"=>"Sucursal","codcategoria"=>"Categoria","codsubcategoria"=>"Subcategoria","dimension"=>"Dimensión","unidad"=>"Unidad","embalajeprincipal"=>"Embalaje Principal","embalajesecundario"=>"Embalaje Secundario","preciounitario"=>"Precio Unitario","preciocf"=>"Precio C/F","preciosf"=>"Precio S/F","cantidadrecarga"=>"Cantidad Recarga","stock"=>"Stock","botones"=>""),$dat,1,"","","");
 ?>

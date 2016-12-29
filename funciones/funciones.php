@@ -198,7 +198,7 @@ function listadotabla($titulo,$datos,$enlaces=0,$ver="",$modifica="",$elimina=""
 			?>
 				<?php foreach ($botones as $k => $v): ?>
 				
-                	<a href="<?php echo $k;?>?<?php if(!empty($adicional)){foreach($adicional as $ak=>$av){ echo $ak."=".$av."&";}}?>Cod=<?php echo $id;?>" class="btn btn-xs" target="<?php echo $target?>"><?php echo $v; ?></a>	
+                	<a href="<?php echo $k;?>?<?php if(!empty($adicional)){foreach($adicional as $ak=>$av){ echo $ak."=".$av."&";}}?>Cod=<?php echo $id;?>" class="btn btn-info " target="<?php echo $target?>"><?php echo $v; ?></a>	
 				<?php endforeach ?>
 			<?php
 			}

@@ -210,102 +210,10 @@ celdaM(80,'"'.$LeyendaPiePagina2.'"',"",7,"C",1);
 $TextoCredito='Desarrollado por'." Ronald Nina";
 celda(80,"------------".$TextoCredito."------------","",6,"C",0);
 
-/*
-
-
-
-
-$Credito=1;
-
-
-$pdf->SetXY($x+155,$y);
-celda(27,'Nº de Autorización'.": ","B",9);
-celda(40,$NumeroAutorizacion,"",8);
-$pdf->Ln();
-$pdf->SetXY($x+155,$y+5);
-celda(35,'Nº Factura'.": ","B",8);
-celda(40,$f['codfactura'],"",8);
-
-$pdf->SetXY($x+20,$y+22);
-celda(20,'Señores'.": ","B");
-celda(65,mayuscula($f['nombre']),"");
-celda(15,'Nit'.": ","B");
-celda(30,($f['nit']),"");
-celda(15,'Fecha'.": ","B");
-celda(40,strftime("%d de %B de %Y",strtotime($f['fechaventa'])),"");
-
 if($f['Estado']=="Anulado"){
-	$pdf->SetXY($x+55,$y+50);
-	celda(50,"ANULADO","",26,"C");
+	$pdf->SetXY(15,90);
+	celda(50,"ANULADO","",30,"C");
 }
-$pdf->SetXY($x+15,$y+30);
-//celda(130,$idioma['DetalleFacturacion'],"B",11,"C");
-//celda(60,$idioma['Sello'],"B",11,"C");
-$i=$y+35;
-foreach($facturadetalle->mostrarTodoRegistro("codfactura=".$CodFactura) as $fd){$i+=4;
-	$pdf->SetXY($x+25,$i);	
-		$pro=$producto->mostrarRegistro($fd['codproducto']);
-        $pro=array_shift($pro);
-        $c=$categoria->mostrarRegistro($pro['codcategoria']);
-        $c=array_shift($c);
-       
-        $sc=$subcategoria->mostrarRegistro($pro['codsubcategoria']);
-        $sc=array_shift($sc);
-        $detalle=$c['nombre'].",".$sc['nombre'].",".$pro['dimension'];
-		//$detalle=quitarSimbolos($detalle,false);
-			
-		$TextoDetalle=capitalizar($detalle);
-
-	celda(115,$TextoDetalle,"","9");
-	celda(35,number_format($fd['total'],2),"",10,"R");
-}
-$pdf->SetXY($x+20,$y+55);
-celda(10,'Son'.": ","B");
-celda(110,mayuscula(num2letras($f['total']))." ".'Bolivianos',"","8");
-celda(15,'Total'.": ","B","8");
-celda(20,number_format($f['total'],2),"",10,"R");
-/*$pdf->SetXY($x+177,$y+55);
-celda(12,$idioma['Cajero'].": ","B","8");
-celda(20,$Usuario,"",8,"");*/
-/*
-$pdf->Ln();
-$pdf->SetXY($x+140,$y+59);
-celda(15,'Cancelado'.": ","B","8");
-celda(20,number_format($f['pagado'],2),"",10,"R");
-
-$pdf->SetXY($x+20,$y+63);
-celda(37,'Fecha Límite de Emisión'.": ","B","8");
-celda(15,fecha2Str($FechaLimiteEmision),"",8,"R");
-if($Credito){
-	$pdf->SetXY($x+100,$y+63);
-	celda(35,$TextoCredito,"","6");
-}
-
-$pdf->SetXY($x+20,$y+59);
-celda(30,'Codigo de Control'.": ","B","8");
-celda(55,$f['codigocontrol'],"",8,"");
-$pdf->SetXY($x+140,$y+63);
-celda(15,'Cambio'.": ","B","8");
-celda(20,number_format($f['devolucion'],2),"",10,"R");
-
-$pdf->SetXY($x+177,$y+59);
-celda(22,'NTransaccion'.": ","B","8");
-celda(10,(($f['codfactura'])),"","8");
-
-$pdf->SetXY($x+177,$y+63);
-celda(10,'Hora'.": ","B","8");
-celda(15,(($f['horaregistro'])),"","8");
-
-
-$pdf->SetXY($x+47,$y+78);
-celda(10,'"'.mayuscula($LeyendaPiePagina).'"',"B","8");
-
-$pdf->SetXY($x+130,$y+13);
-celda(10,'Actividad Económica'.": ".capitalizar($ActividadEconomica),"B","8");
-
-
-$pdf->Image("../../imagenes/factura/codigos/".$CodFactura.".png",$x+22,$y+72,17,17);
-*/
 $pdf->Output("Factura.pdf","I");
 }
 function celda($ancho,$texto,$estilo="",$tam=10,$ali="",$mayuscula=0){

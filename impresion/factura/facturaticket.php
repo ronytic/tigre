@@ -1,6 +1,6 @@
 <?php
 include_once("../../login/check.php");
-if($_GET['codfactura']!=""){
+if($_GET['codfactura']!="" || $_GET['Cod']!=""){
 include_once("../../class/config.php");
 //include_once("../../class/curso.php");
 //include_once("../../class/cuota.php");
@@ -41,6 +41,9 @@ $ImagenFondoFactura=$config->mostrarConfig("ImagenFondoFactura",1);
 
 
 $CodFactura=$_GET['codfactura'];
+if($CodFactura==""){
+    $CodFactura=$_GET['Cod'];
+}
 $f=$factura->mostrarRegistro($CodFactura);
 $f=array_shift($f);
 $NumeroAutorizacion=$f['NumeroAutorizacion'];

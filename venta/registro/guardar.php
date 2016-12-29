@@ -38,9 +38,17 @@ $valoresventa=array("fechaventa"=>"'$fecha'",
 "total"=>"'$totalt'",
 "observacion"=>"'$observacion'",
 					);
+$valoresfactura=array("fechaventa"=>"'$fecha'",
+"nombre"=>"'$nombre'",
+"nit"=>"'$nit'",
+"pagado"=>"'$pagado'",
+"devolucion"=>"'$devolucion'",
+"total"=>"'$totalt'",
+"observacion"=>"'$observacion'",
+					);
 $venta->insertarRegistro($valoresventa);
 $codventa=$venta->ultimo();
-$factura->insertarRegistro($valoresventa);
+$factura->insertarRegistro($valoresfactura);
 $codfactura=$factura->ultimo();
 
 foreach($pro as $prod){
@@ -53,7 +61,7 @@ foreach($pro as $prod){
 	$preciounitario=$prod['preciounitario'];
 	$total=$prod['total'];
 	
-	$fecha=date("Y-m-d");
+	//$fecha=date("Y-m-d");
 	$totalproducto=0;
 	$inv=$inventario->cantidadStock($codproducto,$codsucursal);
 	$inv=array_shift($inv);
@@ -165,14 +173,14 @@ $valoractualizar=array("NFactura"=>"'$NFactura'",
                     "LeyendaPiePagina"=>"'".mysql_escape_string($LeyendaPiePagina)."'",
                     "LeyendaPiePagina2"=>"'".mysql_escape_string($LeyendaPiePagina2)."'",
                     "LlaveDosificacion"=>"'".mysql_escape_string($LlaveDosificacion)."'",
-                    
+                    "Estado"=>"'Valido'"
                     );
 /*echo "<pre>";
 print_r($valoractualizar);
 echo "</pre>";*/
 //$codfactura=4;
 $factura->actualizarRegistro($valoractualizar,"codfactura=".$codfactura);
-
+// exit();
 /*Fin de Registro de Factura*/
 $titulo="Mensaje de Confirmación";
 $folder="../../";

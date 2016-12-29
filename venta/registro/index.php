@@ -150,7 +150,7 @@ function verventas(){
             <div class="hpanel">
                 <div class=" panel-heading">Ventas</div>
                 <div class=" panel-body">
-                <strong>Fecha Limite de Emisión: </strong><?php echo date("d-m-Y",strtotime($FechaLimiteEmision))?>
+                <strong>Fecha Limite de Emisión: </strong><span class="badge"><?php echo date("d-m-Y",strtotime($FechaLimiteEmision))?></span>
                 <form action="guardar.php" method="post" id="formregistro">
                     <table>
                         <tr>

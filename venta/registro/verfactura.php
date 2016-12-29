@@ -8,5 +8,6 @@ include_once("../../cabecerahtml.php");
 ?>
 <?php include_once("../../cabecera.php");?>
 <a href="<?php echo $url?>" target="_blank" class="btn btn-info">Ver Factura</a>
+<a href="index.php" target="" class="btn btn-info">Realizar Nueva Venta</a>
 <iframe width="100%" height="750" src="<?php echo $url;?>" frameborder="0"></iframe>
 <?php include_once("../../pie.php");?>

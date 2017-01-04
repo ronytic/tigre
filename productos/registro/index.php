@@ -67,9 +67,9 @@ function buscar(e){
             <td class="text-right">Precio Sin/Factura</td>
             <td><input type="number" name="preciosf" class="form-control text-right" value="" min="0" step="0.01" placeholder="0" required></td>
         </tr>
-        <tr>
-            <td class="text-right">Especial</td>
-            <td><textarea name="especial" class="form-control"></textarea></td>
+         <tr>
+            <td class="text-right">Precio Especial</td>
+            <td><input type="number" name="especial" class="form-control text-right" value="" placeholder="0" min="0" step="0.01" required></td>
         </tr>
         <tr>
             <td></td>

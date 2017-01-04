@@ -82,8 +82,8 @@ function buscar(e){
             <td><input type="number" name="preciosf" class="form-control text-right" value="<?php echo $pro['preciosf']?>" min="0" step="0.01" placeholder="0" required></td>
         </tr>
         <tr>
-            <td class="text-right">Especial</td>
-            <td><textarea name="especial" class="form-control"><?php echo $pro['especial']?></textarea></td>
+            <td class="text-right">Precio Especial</td>
+            <td><input type="number" name="especial" class="form-control text-right" value="<?php echo $pro['especial']?>" placeholder="0" min="0" step="0.01" required></td>
         </tr>
         <tr>
             <td></td>

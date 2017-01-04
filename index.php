@@ -1,7 +1,8 @@
 <?php
 include_once("login/check.php");
+php_start();
 $folder="";
-$titulo="Página de Inicio";
+$titulo="Distribuidora del SUR";
 $subtitulo="";
 $titulo2="Página de Inicio";
 ?>

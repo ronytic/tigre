@@ -10,12 +10,18 @@ include_once("../../class/subcategoria.php");
 $subcategoria=new subcategoria;
 include_once("../../class/producto.php");
 $producto=new producto;
-$pro=$producto->mostrarRegistro($codproducto);
-$pro=array_shift($pro);
-$subcat=$subcategoria->mostrarRegistro($pro['codsubcategoria']);
-$subcat=array_shift($subcat);
-$cat=$categoria->mostrarRegistro($pro['codcategoria']);
-$cat=array_shift($cat);
+if($codproducto!=0){
+    $pro=$producto->mostrarRegistro($codproducto);
+    $pro=array_shift($pro);
+    $subcat=$subcategoria->mostrarRegistro($pro['codsubcategoria']);
+    $subcat=array_shift($subcat);
+    $cat=$categoria->mostrarRegistro($pro['codcategoria']);
+    $cat=array_shift($cat);
+}else{
+    $cat['nombre']="Otro Producto";
+    $subcat['nombre']="";
+    $pro['dimension']="";
+}
 ?>
 
  <tr>
@@ -29,9 +35,9 @@ $cat=array_shift($cat);
     <?php /*<td><input type="text" class="form-control text-right preciounitario" value="<?php echo $pro['preciounitario'];?>" readonly name="preciounitario" rel="<?php echo $l?>"></td>
     */?>
     <?php if($tipo=="cf"){?>
-    <td><input type="text" class="form-control text-right preciounitario<?php echo $l?>" value="<?php echo number_format($pro['preciocf'],2);?>" readonly name="p[<?php echo $l?>][preciounitario]" rel="<?php echo $l?>"></td>
+    <td><input type="text" class="form-control text-right pu preciounitario<?php echo $l?>" value="<?php echo number_format($pro['preciocf'],2);?>" <?php echo $codproducto==0?'':'readonly'?> name="p[<?php echo $l?>][preciounitario]" rel="<?php echo $l?>"></td>
     <?php }else{?>
-    <td><input type="text" class="form-control text-right preciounitario<?php echo $l?>" value="<?php echo number_format($pro['preciosf'],2);?>" readonly name="p[<?php echo $l?>][preciounitario]" rel="<?php echo $l?>"></td>
+    <td><input type="text" class="form-control text-right pu preciounitario<?php echo $l?>" value="<?php echo number_format($pro['preciosf'],2);?>" <?php echo $codproducto==0?'':'readonly'?> name="p[<?php echo $l?>][preciounitario]" rel="<?php echo $l?>"></td>
     <?php }?>
     <td><input type="text" class="form-control text-right total" value="0" readonly name="p[<?php echo $l?>][total]" rel="<?php echo $l?>"></td>
     <td><a href="" class="eliminar btn btn-danger btn-xs"><i class="fa fa-trash"></i></a></td>

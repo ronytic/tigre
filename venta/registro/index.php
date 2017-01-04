@@ -67,17 +67,41 @@ $(document).on("ready",function(){
         });
         
     });
+    $(document).on("click","#otro",function(e){
+         e.preventDefault();
+        var codproducto=0;
+        var codsucursal=$("#codsucursal").val();
+        var tipo=$("#tipo").val();
+        $.post("adicionar.php",{"codproducto":codproducto,"codsucursal":codsucursal,"tipo":tipo,"l":l},function(data){
+           $("#marca").before(data);
+           l++;
+        });
+        
+    });
     $(document).on("click",".eliminar",function(e){
          e.preventDefault();
         $(this).parent().parent().remove();
         sumar();
         
     });
-     $(document).on("click",".cantidad",function(e){
+    $(document).on("click",".cantidad,.pu",function(e){
+        $(this).select();
+    });
+     $(document).on("change",".cantidad",function(e){
          e.preventDefault();
         var lin=$(this).attr("rel");
         var pu=parseFloat($(".preciounitario"+lin).val());
         var cantidad=parseFloat($(this).val())
+        var total=cantidad*pu;
+        $(".total[rel="+lin+"]").val(total.toFixed(2))
+        sumar();
+        
+    });
+    $(document).on("keyup",".pu",function(e){
+         e.preventDefault();
+        var lin=$(this).attr("rel");
+        var pu=parseFloat($(".preciounitario"+lin).val());
+        var cantidad=parseFloat($(".cantidad[rel="+lin+"]").val())
         var total=cantidad*pu;
         $(".total[rel="+lin+"]").val(total.toFixed(2))
         sumar();
@@ -123,6 +147,7 @@ function verventas(){
                                     <?php }?>
                                 </select></td>
                             <td> Tipo: </td><td><select name="tipo" id="tipo" class="form-control"><option value="cf">Con Factura</option><option value="sf">Sin Factura</option></select></td>
+                            <td><a href="#" class="btn btn-success" id="otro">Otro Producto</a></td>
                         </tr>
                     </table>
                 

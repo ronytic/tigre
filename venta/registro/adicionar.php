@@ -18,7 +18,7 @@ if($codproducto!=0){
     $cat=$categoria->mostrarRegistro($pro['codcategoria']);
     $cat=array_shift($cat);
 }else{
-    $cat['nombre']="Otro Producto";
+    $cat['nombre']="Productos Tigre";
     $subcat['nombre']="";
     $pro['dimension']="";
 }

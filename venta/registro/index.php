@@ -180,7 +180,7 @@ function verventas(){
                     <table>
                         <tr>
                             <td><strong>Nombre:</strong><br><input type="text" name="nombre" class="form-control"></td>
-                            <td><strong>Nit:</strong><br><input type="text" name="nit" class="form-control"></td>
+                            <td><strong>Nit:</strong><br><input type="text" name="nit" class="form-control" required></td>
                         </tr>
                         <tr>
                             <td><strong>Fecha:</strong><br><input type="date" name="fecha" class="form-control" value="<?php echo date("Y-m-d");?>" required></td>
@@ -209,7 +209,7 @@ function verventas(){
                         <tr>
                             <td colspan="4" class="text-right">Cancelado:</td>
                             
-                            <td><input type="text" class="form-control text-right" id="pagado" name="pagado" value="0" ></td>
+                            <td><input type="text" class="form-control text-right" id="pagado" name="pagado" value="0"  required></td>
                         </tr>
                         <tr>
                             <td colspan="4" class="text-right">Cambio:</td>

@@ -227,6 +227,7 @@ $pdf->Output("Factura.pdf","I");
 }
 function celda($ancho,$texto,$estilo="B",$tam=10,$ali="",$mayuscula=0){
 	global $pdf;
+    $estilo="B";
 	$pdf->SetFont("Courier",$estilo,$tam);
     if($mayuscula==1){
         $texto=mb_strtoupper($texto,"utf8");
@@ -235,6 +236,7 @@ function celda($ancho,$texto,$estilo="B",$tam=10,$ali="",$mayuscula=0){
 }
 function celdaM($ancho,$texto,$estilo="B",$tam=10,$ali="",$mayuscula=0){
 	global $pdf;
+     $estilo="B";
 	$pdf->SetFont("Courier",$estilo,$tam);
     if($mayuscula==1){
         $texto=mb_strtoupper($texto,"utf8");
